@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Resep Makanan Kita</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar bg-primary d-none d-lg-block">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">lebong</a></small>
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@margareta.com</a></small>
+                    </div>
+                    <div class="top-link pe-2">
+                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">resep makanan kita</h1></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link active">resep detail </a>
+                            <a href="shop-detail.html" class="nav-item nav-link"></a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="cart.html" class="dropdown-item">Cart</a>
+                                    <a href="chackout.html" class="dropdown-item">Chackout</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex m-3 me-0">
+                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                            <a href="#" class="position-relative me-4 my-auto">
+                                <i class="fa fa-shopping-bag fa-2x"></i>
+                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                            </a>
+                            <a href="#" class="my-auto">
+                                <i class="fas fa-user fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Resep</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-white">Resep</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+
+        <!-- Fruits Shop Start-->
+        <div class="container-fluid fruite py-5">
+            <div class="container py-5">
+                <h1 class="mb-4">resep detail olahan sayur dan daging </h1>
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="row g-4">
+                            <div class="col-xl-3">
+                                <div class="input-group w-100 mx-auto d-flex">
+                                    <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                                    <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-6"></div>
+                            <div class="col-xl-3">
+                                <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
+                                    <label for="fruits">Default Sorting:</label>
+                                    <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform">
+                                        <option value="volvo">Nothing</option>
+                                        <option value="saab">Popularity</option>
+                                        <option value="opel">Organic</option>
+                                        <option value="audi">Fantastic</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3">
+                                <div class="row g-4">
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <h4>Categories vegetables</h4>
+                                            <ul class="list-unstyled fruite-categorie">
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>resep detail capcai</a>
+                                                        <span>(3)</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>resep detail cah kangkung</a>
+                                                        <span>(5)</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>resep detail sayur bening</a>
+                                                        <span>(2)</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>resep detail kentang hati ampela</a>
+                                                        <span>(8)</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex justify-content-between fruite-name">
+                                                        <a href="#"><i class="fas fa-apple-alt me-2"></i>resep detail sayur asem</a>
+                                                        <span>(5)</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <h4 class="mb-2">categories meat</h4>
+                                            <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value">
+                                            <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <h4>meat</h4>
+                                            <div class="mb-2">
+                                                <input type="radio" class="me-2" id="Categories-1" name="Categories-1" value="Beverages">
+                                                <label for="Categories-1"> resep detail rendang</label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="me-2" id="Categories-2" name="Categories-1" value="Beverages">
+                                                <label for="Categories-2">resep detail dendeng balado</label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="me-2" id="Categories-3" name="Categories-1" value="Beverages">
+                                                <label for="Categories-3"> resep detail ayam bakar </label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="me-2" id="Categories-4" name="Categories-1" value="Beverages">
+                                                <label for="Categories-4"> resep detail opor ayam </label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="me-2" id="Categories-5" name="Categories-1" value="Beverages">
+                                                <label for="Categories-5"> resep detail daging teriyaki </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h4 class="mb-3">Featured products</h4>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                                <img src="img/featur-1.jpg" class="img-fluid rounded" alt="">
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-2">Big Banana</h6>
+                                                <div class="d-flex mb-2">
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="d-flex mb-2">
+                                                    <h5 class="fw-bold me-2">2.99 $</h5>
+                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                                <img src="img/featur-2.jpg" class="img-fluid rounded" alt="">
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-2">Big Banana</h6>
+                                                <div class="d-flex mb-2">
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="d-flex mb-2">
+                                                    <h5 class="fw-bold me-2">2.99 $</h5>
+                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-start">
+                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                                <img src="img/featur-3.jpg" class="img-fluid rounded" alt="">
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-2">Big Banana</h6>
+                                                <div class="d-flex mb-2">
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star text-secondary"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="d-flex mb-2">
+                                                    <h5 class="fw-bold me-2">2.99 $</h5>
+                                                    <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center my-4">
+                                            <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="position-relative">
+                                            <img src="images/capcai.jpg" class="img-fluid w-100 rounded" alt="">
+                                            <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
+                                                <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/capcai 1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep capcai</h4>
+                                                <p>Bahan-bahan:
+                                                    Sayuran:
+                                                    100 gram wortel (iris serong tipis)
+                                                    100 gram kol (potong kasar)
+                                                    100 gram brokoli (potong kecil)
+                                                    100 gram kembang kol (potong kecil)
+                                                    50 gram buncis (potong serong)
+                                                    100 gram sawi hijau atau sawi putih (potong kasar)
+                                                    Pelengkap (opsional):
+                                                    100 gram udang (kupas kulitnya)
+                                                    100 gram ayam (potong kecil, rebus sebentar)
+                                                    3 butir bakso (iris tipis)
+                                                    1 butir telur (orak-arik, opsional)
+                                                    Bumbu:
+                                                    3 siung bawang putih (cincang halus)
+                                                    1 butir bawang bombai (iris panjang)
+                                                    2 sdm saus tiram
+                                                    1 sdm kecap manis
+                                                    1 sdm kecap asin
+                                                    1/2 sdt garam
+                                                    1/2 sdt merica bubuk
+                                                    1 sdt gula pasir
+                                                    200 ml air kaldu (atau air biasa)
+                                                    2 sdm minyak goreng
+                                                    Cara Membuat:
+                                                    Persiapan:
+                                                    Panaskan minyak di wajan, tumis bawang putih dan bawang bombai hingga harum.
+Tambahkan Pelengkap:
+
+Masukkan ayam, udang, atau bakso. Tumis hingga berubah warna dan matang.
+Masukkan Sayuran:
+
+Tambahkan wortel, brokoli, kembang kol, dan buncis. Aduk sebentar.
+Tuangkan air kaldu, masak hingga sayuran mulai layu.
+Bumbui:
+
+Tambahkan saus tiram, kecap manis, kecap asin, garam, merica, dan gula. Aduk rata.
+Tambahkan Sayuran Lain:
+
+Masukkan kol dan sawi hijau. Masak sebentar hingga semua sayuran matang tapi tetap renyah.
+Penyajian:
+
+Angkat dan sajikan capcai di piring saji.
+Nikmati selagi hangat dengan nasi putih atau tanpa nasi./p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/cah kangkung.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep cah kangkung </h4>
+                                                <p>Bahan-bahan:
+                                                    2 ikat kangkung (siangi, buang batang keras)
+                                                    3 siung bawang putih (cincang halus)
+                                                    3 butir bawang merah (iris tipis)
+                                                    2 buah cabai merah (iris serong, opsional)
+                                                    1 sdm saus tiram
+                                                    1 sdt kecap asin (opsional)
+                                                    1 sdm kecap manis
+                                                    1/2 sdt garam
+                                                    1/2 sdt gula pasir
+                                                    1/4 sdt merica bubuk
+                                                    50 ml air
+                                                    2 sdm minyak goreng
+                                                    Cara Membuat:
+                                                    Tumis Bumbu:
+                                                    
+                                                    Panaskan minyak di wajan.
+                                                    Tumis bawang putih, bawang merah, dan cabai hingga harum.
+                                                    Tambahkan Kangkung:
+                                                    
+                                                    Masukkan kangkung, aduk cepat hingga layu.
+                                                    Bumbui:
+                                                    
+                                                    Tambahkan saus tiram, kecap manis, kecap asin, garam, gula, dan merica. Aduk rata.
+                                                    Tambahkan Air:
+                                                    
+                                                    Tuang air ke dalam wajan, masak sebentar hingga kangkung matang (jangan terlalu lama agar tidak terlalu lembek).
+                                                    Penyajian:
+                                                    
+                                                    Angkat dan sajikan selagi hangat.
+Cocok dinikmati dengan nasi putih dan lauk pendamping.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/sayur bening.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>Resep sayur bening</h4>
+                                                <p> Bahan-bahan:
+                                                    1 ikat bayam (siangi daunnya)
+                                                    1 buah jagung manis (potong menjadi beberapa bagian)
+                                                    2 buah wortel (iris tipis)
+                                                    1 buah labu siam (potong dadu kecil, opsional)
+                                                    3 siung bawang merah (iris tipis)
+                                                    2 cm kencur (geprek)
+                                                    1 liter air
+                                                    1/2 sdt garam
+                                                    1/2 sdt gula pasir
+                                                    1/4 sdt kaldu bubuk (opsional)
+                                                    Cara Membuat:
+                                                    Rebus Air:
+                                                    
+                                                    Didihkan air dalam panci.
+                                                    Masukkan Bumbu dan Jagung:
+                                                    
+                                                    Masukkan bawang merah dan kencur ke dalam air mendidih. Rebus hingga harum.
+                                                    Tambahkan jagung manis, masak hingga jagung mulai matang.
+                                                    Tambahkan Sayuran:
+                                                    
+                                                    Masukkan wortel, labu siam (jika pakai), dan masak hingga empuk.
+                                                    Masukkan Bayam:
+                                                    
+                                                    Masukkan bayam terakhir agar tidak terlalu layu. Aduk rata.
+                                                    Bumbui:
+                                                    
+                                                    Tambahkan garam, gula, dan kaldu bubuk (jika suka). Aduk rata dan cicipi.
+Penyajian:
+
+Angkat dan sajikan selagi hangat bersama nasi putih dan lauk favorit Anda.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/sambal.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep kentang hati ampela </h4>
+                                                <p> Bahan-bahan:
+                                                    300 gram hati dan ampela ayam (bersihkan, potong kecil)
+                                                    3 buah kentang (kupas, potong dadu, goreng hingga matang)
+                                                    2 lembar daun salam
+                                                    2 cm lengkuas (geprek)
+                                                    2 batang serai (geprek)
+                                                    3 sdm kecap manis
+                                                    1 sdt gula merah (serut)
+                                                    1 sdt garam
+                                                    1/2 sdt merica bubuk
+                                                    1/2 sdt kaldu bubuk (opsional)
+                                                    500 ml air
+                                                    3 sdm minyak goreng
+                                                    Bumbu Halus:
+                                                    5 siung bawang merah
+                                                    3 siung bawang putih
+                                                    2 butir kemiri (sangrai)
+                                                    5 buah cabai merah keriting (sesuai selera)
+                                                    1 cm jahe
+                                                    1 cm kunyit (opsional)
+                                                    Cara Membuat:
+                                                    Rebus Hati dan Ampela:
+                                                    Rebus hati dan ampela dengan air, tambahkan sedikit garam hingga empuk. Tiriskan.
+Tumis Bumbu:
+
+Panaskan minyak, tumis bumbu halus bersama daun salam, lengkuas, dan serai hingga harum.
+Masak Hati dan Ampela:
+
+Masukkan hati dan ampela ke dalam tumisan bumbu, aduk hingga tercampur rata.
+Tambahkan Air dan Bumbu:
+
+Tuang air, tambahkan kecap manis, gula merah, garam, dan merica. Aduk rata dan masak hingga bumbu meresap dan air menyusut.
+Tambahkan Kentang:
+
+Masukkan kentang goreng ke dalam masakan, aduk perlahan agar tidak hancur. Masak sebentar hingga bumbu merata.
+Penyajian:
+
+Angkat dan sajikan kentang hati ampela dengan nasi hangat.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/rendang.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep rendang </h4>
+                                                <p>Bahan Utama:
+                                                    1 kg daging sapi (potong sesuai selera)
+                                                    1 liter santan kental (dari 2 butir kelapa)
+                                                    500 ml santan encer
+                                                    4 lembar daun jeruk (sobek-sobek)
+                                                    2 lembar daun kunyit (ikat simpul)
+                                                    2 batang serai (memarkan)
+                                                    3 cm asam kandis (atau sesuai selera)
+                                                    Garam dan gula secukupnya
+                                                    Bumbu Halus:
+                                                    10 butir bawang merah
+                                                    6 siung bawang putih
+                                                    5 buah cabai merah besar
+                                                    10 buah cabai rawit (sesuai tingkat pedas yang diinginkan)
+                                                    5 cm lengkuas
+                                                    3 cm jahe
+                                                    3 cm kunyit
+                                                    5 butir kemiri
+                                                    1 sdm ketumbar sangrai
+                                                    1 sdt jinten
+                                                    Langkah-Langkah:
+                                                    Persiapan Daging:
+                                                    
+                                                    Potong daging sapi sesuai ukuran yang diinginkan, cuci bersih, dan tiriskan.
+                                                    Memasak Santan dan Bumbu:
+                                                    
+                                                    Panaskan wajan besar (anti lengket lebih baik). Tuang santan encer, masukkan bumbu halus, daun jeruk, daun kunyit, serai, dan asam kandis.
+                                                    Masak dengan api sedang sambil terus diaduk agar santan tidak pecah.
+                                                    Menambahkan Daging:
+                                                    
+                                                    Setelah santan mendidih, masukkan potongan daging sapi. Masak hingga santan mulai mengental dan bumbu meresap.
+                                                    Memasukkan Santan Kental:
+                                                    
+                                                    Tambahkan santan kental. Kecilkan api dan masak perlahan hingga daging empuk, bumbu mengering, dan berubah warna gelap (cokelat kehitaman).
+                                                    Aduk sesekali agar tidak gosong di bagian bawah.
+                                                    Penyelesaian:
+                                                    
+                                                    Cicipi rasa, tambahkan garam atau gula jika perlu.
+                                                    Masak hingga rendang benar-benar matang sesuai selera (kering atau masih sedikit berkuah).
+                                                    Sajikan:
+                                                    
+                                                    Angkat dan sajikan rendang dengan nasi hangat.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/dendeng.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep dendeng balado</h4>
+                                                <p>Bahan Utama:
+                                                    500 gram daging sapi (iris tipis lebar melawan serat)
+                                                    500 ml air (untuk merebus)
+                                                    2 lembar daun salam
+                                                    2 cm lengkuas (memarkan)
+                                                    Garam secukupnya
+                                                    Minyak goreng secukupnya
+                                                    Bahan Balado:
+                                                    10 buah cabai merah besar (sesuai tingkat pedas yang diinginkan)
+                                                    5 buah cabai rawit merah (opsional, untuk lebih pedas)
+                                                    6 butir bawang merah
+                                                    3 siung bawang putih
+                                                    2 buah tomat merah
+                                                    1 sdt air jeruk nipis
+                                                    Gula secukupnya
+                                                    Garam secukupnya
+                                                    Langkah-Langkah:
+                                                    1. Memasak Daging:
+                                                    Rebus daging bersama daun salam, lengkuas, dan sedikit garam hingga empuk.
+                                                    Angkat daging, tiriskan, dan pipihkan dengan ulekan atau alat khusus hingga agak tipis.
+                                                    2. Menggoreng Daging:
+                                                    Panaskan minyak dalam jumlah banyak.
+                                                    Goreng daging hingga kering dan renyah. Angkat, tiriskan, dan sisihkan.
+                                                    3. Membuat Sambal Balado:
+                                                    Rebus cabai merah, cabai rawit, tomat, bawang merah, dan bawang putih hingga layu.
+                                                    Haluskan kasar (gunakan ulekan agar tekstur balado lebih terasa).
+                                                    Tumis bumbu halus dengan sedikit minyak hingga harum.
+                                                    Tambahkan garam, gula, dan air jeruk nipis. Masak hingga bumbu matang dan sedikit mengering.
+                                                    4. Menggabungkan Daging dan Sambal:
+                                                    Masukkan daging goreng ke dalam wajan berisi sambal balado.
+                                                    Aduk hingga daging terbalut sempurna dengan sambal.
+                                                    5. Penyajian:
+                                                    Angkat dan sajikan dendeng balado dengan nasi hangat.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/ayam bakar 1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep ayam bakar </h4>
+                                                <p>Bahan Utama:
+                                                    1 ekor ayam (potong menjadi 4 atau 8 bagian, sesuai selera)
+                                                    3 lembar daun jeruk
+                                                    2 lembar daun salam
+                                                    2 batang serai (memarkan)
+                                                    2 cm lengkuas (memarkan)
+                                                    500 ml santan encer
+                                                    3 sdm kecap manis
+                                                    2 sdm air asam jawa
+                                                    2 sdm minyak goreng
+                                                    Bumbu Halus:
+                                                    6 butir bawang merah
+                                                    4 siung bawang putih
+                                                    4 buah cabai merah besar (opsional, jika ingin sedikit pedas)
+                                                    3 butir kemiri (sangrai)
+                                                    1 sdm ketumbar
+                                                    1 sdt merica
+                                                    2 cm jahe
+                                                    Garam dan gula secukupnya
+                                                    Langkah-Langkah:
+                                                    1. Membumbui Ayam:
+                                                    Cuci bersih potongan ayam, lumuri dengan sedikit garam dan air jeruk nipis, lalu diamkan selama 15 menit. Bilas kembali.
+                                                    2. Memasak Ayam dengan Bumbu:
+                                                    Tumis bumbu halus bersama daun jeruk, daun salam, serai, dan lengkuas hingga harum.
+                                                    Masukkan ayam, aduk hingga ayam berubah warna.
+                                                    Tuang santan encer, tambahkan kecap manis dan air asam jawa.
+                                                    Masak dengan api kecil hingga bumbu meresap dan kuah menyusut.
+                                                    3. Membakar Ayam:
+                                                    Panaskan panggangan atau grill.
+                                                    Olesi ayam dengan sedikit sisa bumbu dan minyak goreng.
+                                                    Bakar ayam sambil sesekali dioles dengan sisa bumbu hingga kecokelatan dan harum.
+                                                    4. Penyajian:
+                                                    Sajikan ayam bakar dengan nasi hangat, sambal, dan lalapan seperti timun, kol, atau daun kemangi.
+                                                    </p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/opor ayam.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>resep opor ayam </h4>
+                                                <p>Bahan Utama:
+                                                    1 ekor ayam (potong menjadi 8 bagian)
+                                                    1 liter santan encer
+                                                    500 ml santan kental
+                                                    3 lembar daun jeruk
+                                                    2 lembar daun salam
+                                                    2 batang serai (memarkan)
+                                                    2 cm lengkuas (memarkan)
+                                                    2 sdm minyak untuk menumis
+                                                    Garam dan gula secukupnya
+                                                    Bumbu Halus:
+                                                    8 butir bawang merah
+                                                    5 siung bawang putih
+                                                    3 butir kemiri (sangrai)
+                                                    2 cm kunyit (bakar sebentar)
+                                                    1 sdt ketumbar (sangrai)
+                                                    1/2 sdt merica butiran
+                                                    2 cm jahe
+                                                    Langkah-Langkah:
+                                                    1. Persiapan Ayam:
+                                                    Cuci bersih potongan ayam, lumuri dengan sedikit garam dan air jeruk nipis. Diamkan selama 15 menit, lalu bilas kembali.
+                                                    2. Menumis Bumbu:
+                                                    Panaskan minyak, tumis bumbu halus bersama daun jeruk, daun salam, serai, dan lengkuas hingga harum.
+                                                    3. Memasak Ayam:
+                                                    Masukkan potongan ayam ke dalam wajan, aduk hingga ayam berubah warna dan tercampur rata dengan bumbu.
+                                                    Tuang santan encer, masak dengan api kecil hingga ayam empuk dan bumbu meresap.
+                                                    4. Menambahkan Santan Kental:
+                                                    Tambahkan santan kental, aduk perlahan agar santan tidak pecah.
+                                                    Masak hingga kuah mengental dan ayam matang sempurna.
+                                                    Koreksi rasa dengan menambahkan garam dan gula sesuai selera.
+                                                    5. Penyajian:
+                                                    Angkat dan sajikan opor ayam dengan lontong, ketupat, atau nasi hangat.
+                                                    </p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="images/daging teriyaki.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>daging teriyaki</h4>
+                                                <p>Bahan Utama:
+                                                    500 gram daging sapi (iris tipis, seperti sirloin atau tenderloin)
+                                                    1 buah bawang bombai (iris tipis)
+                                                    2 siung bawang putih (cincang halus)
+                                                    1 sdm minyak wijen (opsional, untuk rasa lebih autentik)
+                                                    2 sdm minyak goreng
+                                                    1 batang daun bawang (iris serong untuk garnish)
+                                                    Bahan Saus Teriyaki:
+                                                    3 sdm kecap asin
+                                                    2 sdm kecap manis
+                                                    2 sdm saus teriyaki (opsional, untuk rasa lebih kuat)
+                                                    1 sdm madu atau gula merah
+                                                    1 sdt jahe parut
+                                                    2 sdm air (jika ingin saus lebih encer)
+                                                    Langkah-Langkah:
+                                                    1. Marinasi Daging:
+                                                    Campur semua bahan saus teriyaki dalam mangkuk.
+                                                    Masukkan daging yang sudah diiris tipis ke dalam saus. Aduk hingga merata.
+                                                    Diamkan selama 20-30 menit di lemari es agar bumbu meresap.
+                                                    2. Memasak Daging Teriyaki:
+                                                    Panaskan wajan dengan minyak goreng dan minyak wijen.
+                                                    Tumis bawang putih hingga harum, lalu masukkan bawang bombai. Tumis hingga layu.
+                                                    Masukkan daging bersama saus marinasi. Masak dengan api sedang hingga daging matang dan empuk.
+                                                    Aduk hingga saus teriyaki mengental dan melapisi daging dengan baik.
+                                                    3. Penyajian:
+                                                    Angkat dan sajikan daging teriyaki di atas piring.
+                                                    Taburi dengan irisan daun bawang dan biji wijen panggang (opsional) sebagai garnish.
+                                                    </p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"></p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="pagination d-flex justify-content-center mt-5">
+                                            <a href="#" class="rounded">&laquo;</a>
+                                            <a href="#" class="active rounded">1</a>
+                                            <a href="#" class="rounded">2</a>
+                                            <a href="#" class="rounded">3</a>
+                                            <a href="#" class="rounded">4</a>
+                                            <a href="#" class="rounded">5</a>
+                                            <a href="#" class="rounded">6</a>
+                                            <a href="#" class="rounded">&raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fruits Shop End-->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#">
+                                <h1 class="text-primary mb-0">Fruitables</h1>
+                                <p class="text-secondary mb-0">Fresh products</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mx-auto">
+                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end pt-3">
+                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">typesetting, remaining essentially unchanged. It was 
+                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link" href="">About Us</a>
+                            <a class="btn-link" href="">Contact Us</a>
+                            <a class="btn-link" href="">Privacy Policy</a>
+                            <a class="btn-link" href="">Terms & Condition</a>
+                            <a class="btn-link" href="">Return Policy</a>
+                            <a class="btn-link" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Account</h4>
+                            <a class="btn-link" href="">My Account</a>
+                            <a class="btn-link" href="">Shop details</a>
+                            <a class="btn-link" href="">Shopping Cart</a>
+                            <a class="btn-link" href="">Wishlist</a>
+                            <a class="btn-link" href="">Order History</a>
+                            <a class="btn-link" href="">International Orders</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: 1429 Netus Rd, NY 48247</p>
+                            <p>Email: Example@gmail.com</p>
+                            <p>Phone: +0123 4567 8910</p>
+                            <p>Payment Accepted</p>
+                            <img src="img/payment.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
